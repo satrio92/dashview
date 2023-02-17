@@ -1,0 +1,27 @@
+{
+  "name": "dashview",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "devcss": "postcss public/styles/tailwind.css -o public/styles/style.css -w",
+    "devBrows": "browser-sync start --proxy http://localhost:3000 --files '**/*' --watch 'public/styles/*.css'",
+    "dev": "concurrently \"nodemon server.js\" \"npm run devcss\" \"npm run devBrows\""
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "concurrently": "^7.6.0",
+    "ejs": "^3.1.8",
+    "express": "^4.18.2",
+    "nodemon": "^2.0.20"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.13",
+    "browser-sync": "^2.27.11",
+    "postcss": "^8.4.21",
+    "postcss-cli": "^10.0.0",
+    "tailwindcss": "^3.2.7"
+  }
+}
